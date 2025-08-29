@@ -1,4 +1,7 @@
+// api/index.js - Correct Vercel Serverless Function format
 const express = require('express');
+
+// Create express app
 const app = express();
 
 // Middleware to parse JSON
