@@ -1,15 +1,24 @@
 {
   "version": 2,
-  "builds": [
-    {
-      "src": "api/index.js",
-      "use": "@vercel/node"
+  "functions": {
+    "api/index.js": {
+      "runtime": "@vercel/node@2.0.0"
     }
-  ],
+  },
   "routes": [
+    {
+      "src": "/api/bfhl",
+      "dest": "/api/index.js"
+    },
     {
       "src": "/api/(.*)",
       "dest": "/api/index.js"
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/api/(.*)",
+      "destination": "/api/index.js"
     }
   ]
 }
