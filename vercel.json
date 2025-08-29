@@ -5,16 +5,6 @@
       "runtime": "@vercel/node@2.0.0"
     }
   },
-  "routes": [
-    {
-      "src": "/api/bfhl",
-      "dest": "/api/index.js"
-    },
-    {
-      "src": "/api/(.*)",
-      "dest": "/api/index.js"
-    }
-  ],
   "rewrites": [
     {
       "source": "/api/(.*)",
